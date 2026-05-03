@@ -33,11 +33,19 @@ namespace BeepPlayer
 
             // 讓表單在子控制項之前優先接收鍵盤事件
             this.KeyPreview = true;
+
+            this.Shown += frmBeepPlayer_Shown;
+        }
+
+        private void frmBeepPlayer_Shown(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
 
         private void frmBeepPlayer_KeyDown(object sender, KeyEventArgs e)
         {
             int index = -1;
+
             // 根據按下的按鍵決定對應的陣列索引
             switch (e.KeyCode)
             {
@@ -45,16 +53,24 @@ namespace BeepPlayer
                 case Keys.S: index = 1; break; // Re
                 case Keys.D: index = 2; break; // Mi
                 case Keys.F: index = 3; break; // Fa
-                case Keys.G: index = 4; break; // So
+                case Keys.G: index = 4; break; // Sol
                 case Keys.H: index = 5; break; // La
-                case Keys.J: index = 6; break; // Ti
-                case Keys.K: index = 7; break; // Do (高音)
+                case Keys.J: index = 6; break; // Si
+                case Keys.K: index = 7; break; // Do 高音
             }
 
-            // 如果有對應的按鍵，則發出聲音
             if (index != -1)
             {
+                // 用鍵盤按到哪個音符，就讓哪個按鈕出現藍框
+                Button[] buttons = { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8 };
+
+                buttons[index].Focus();
+
                 Beep(freq[index], 300);
+
+                // 避免鍵盤事件被其他控制項繼續處理
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -73,14 +89,17 @@ namespace BeepPlayer
         private void btn1_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            btn.Enabled = false;
+
+            // 讓被按到的按鈕出現藍框
+            btn.Focus();
+
+            // 播放對應音符
             Beep(freq[btn.TabIndex], 300);
-            btn.Enabled = true;
         }
 
         private void frmBeepPlayer_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("歡迎使用 Beep Player！\n\n請按下按鈕來播放對應的音符。");
+            MessageBox.Show("歡迎使用 Beep Player！\n\n請按下按鈕來播放對應的音符。");
 
             // 儲存初始的視窗大小
             this.initWidth = this.palMain.Width;
@@ -92,6 +111,7 @@ namespace BeepPlayer
                 this.initControl.Add(ctl.Name, new Rect(ctl.Left, ctl.Top,
                 ctl.Width, ctl.Height));
             }
+
         }
 
 
@@ -129,7 +149,5 @@ namespace BeepPlayer
                 e.Cancel = true; // 取消關閉
             }
         }
-
-        
     }
 }
