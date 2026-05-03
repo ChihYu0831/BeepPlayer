@@ -30,6 +30,32 @@ namespace BeepPlayer
         {
             InitializeComponent();
             InitializeButton();
+
+            // 讓表單在子控制項之前優先接收鍵盤事件
+            this.KeyPreview = true;
+        }
+
+        private void frmBeepPlayer_KeyDown(object sender, KeyEventArgs e)
+        {
+            int index = -1;
+            // 根據按下的按鍵決定對應的陣列索引
+            switch (e.KeyCode)
+            {
+                case Keys.A: index = 0; break; // Do
+                case Keys.S: index = 1; break; // Re
+                case Keys.D: index = 2; break; // Mi
+                case Keys.F: index = 3; break; // Fa
+                case Keys.G: index = 4; break; // So
+                case Keys.H: index = 5; break; // La
+                case Keys.J: index = 6; break; // Ti
+                case Keys.K: index = 7; break; // Do (高音)
+            }
+
+            // 如果有對應的按鍵，則發出聲音
+            if (index != -1)
+            {
+                Beep(freq[index], 300);
+            }
         }
 
         private void InitializeButton()
@@ -103,5 +129,7 @@ namespace BeepPlayer
                 e.Cancel = true; // 取消關閉
             }
         }
+
+        
     }
 }
