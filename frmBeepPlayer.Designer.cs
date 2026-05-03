@@ -42,6 +42,7 @@
             // 
             // palMain
             // 
+            this.palMain.BackColor = System.Drawing.Color.LightPink;
             this.palMain.Controls.Add(this.btn2);
             this.palMain.Controls.Add(this.btn3);
             this.palMain.Controls.Add(this.btn4);
@@ -58,84 +59,99 @@
             // 
             // btn2
             // 
+            this.btn2.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn2.ForeColor = System.Drawing.SystemColors.Control;
             this.btn2.Location = new System.Drawing.Point(76, 24);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(57, 74);
             this.btn2.TabIndex = 1;
             this.btn2.Text = "Re";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.UseVisualStyleBackColor = false;
             // 
             // btn3
             // 
+            this.btn3.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn3.ForeColor = System.Drawing.SystemColors.Control;
             this.btn3.Location = new System.Drawing.Point(140, 24);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(57, 74);
             this.btn3.TabIndex = 2;
             this.btn3.Text = "Mi";
-            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.UseVisualStyleBackColor = false;
             // 
             // btn4
             // 
+            this.btn4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4.ForeColor = System.Drawing.SystemColors.Control;
             this.btn4.Location = new System.Drawing.Point(204, 24);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(57, 74);
             this.btn4.TabIndex = 3;
             this.btn4.Text = "Fa";
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.UseVisualStyleBackColor = false;
             // 
             // btn5
             // 
+            this.btn5.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn5.ForeColor = System.Drawing.SystemColors.Control;
             this.btn5.Location = new System.Drawing.Point(268, 24);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(57, 74);
             this.btn5.TabIndex = 4;
             this.btn5.Text = "Sol";
-            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.UseVisualStyleBackColor = false;
             // 
             // btn6
             // 
+            this.btn6.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn6.ForeColor = System.Drawing.SystemColors.Control;
             this.btn6.Location = new System.Drawing.Point(332, 24);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(57, 74);
             this.btn6.TabIndex = 5;
             this.btn6.Text = "La";
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.UseVisualStyleBackColor = false;
             // 
             // btn7
             // 
+            this.btn7.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7.ForeColor = System.Drawing.SystemColors.Control;
             this.btn7.Location = new System.Drawing.Point(396, 24);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(57, 74);
             this.btn7.TabIndex = 6;
             this.btn7.Text = "Si";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.UseVisualStyleBackColor = false;
             // 
             // btn8
             // 
+            this.btn8.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn8.ForeColor = System.Drawing.Color.Red;
+            this.btn8.ForeColor = System.Drawing.Color.DarkRed;
             this.btn8.Location = new System.Drawing.Point(460, 24);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(57, 74);
             this.btn8.TabIndex = 7;
             this.btn8.Text = "Do";
-            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.UseVisualStyleBackColor = false;
             // 
             // btn1
             // 
+            this.btn1.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btn1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1.ForeColor = System.Drawing.SystemColors.Control;
             this.btn1.Location = new System.Drawing.Point(12, 24);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(57, 74);
             this.btn1.TabIndex = 0;
             this.btn1.Text = "Do";
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // frmBeepPlayer
