@@ -99,7 +99,7 @@ namespace BeepPlayer
 
         private void frmBeepPlayer_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("歡迎使用 Beep Player！\n\n請按下按鈕來播放對應的音符。");
+            MessageBox.Show("歡迎使用 Beep Player！\n\n請按下按鈕來播放對應的音符。\n\n 或使用鍵盤上的 A~K 鍵來播放音符。");
 
             // 儲存初始的視窗大小
             this.initWidth = this.palMain.Width;
